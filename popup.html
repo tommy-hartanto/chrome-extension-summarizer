@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Link Summarizer</title>
+  <style>
+    body {
+      width: 400px;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    #search {
+      width: 70%;
+      padding: 5px;
+    }
+    #clear-all {
+      padding: 5px 10px;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .summary-group {
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .summary-group-header {
+      background-color: #f0f0f0;
+      padding: 5px 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .summary-count {
+      font-size: 0.8em;
+      color: #666;
+    }
+    .summary-group-content {
+      display: none;
+      padding: 10px;
+    }
+    .summary-item {
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .summary-title {
+      font-weight: bold;
+    }
+    .summary-text {
+      font-size: 0.9em;
+      color: #555;
+      margin: 5px 0;
+    }
+    .summary-url {
+      font-size: 0.8em;
+      color: #0066cc;
+    }
+    .summary-timestamp {
+      font-size: 0.7em;
+      color: #888;
+    }
+    .delete-summary {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 2px 5px;
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Stored Summaries</h1>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search summaries...">
+    <button id="clear-all">Clear All</button>
+  </div>
+  <div id="summaries-container"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
